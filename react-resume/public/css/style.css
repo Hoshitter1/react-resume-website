@@ -1,0 +1,391 @@
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+span, a {
+    font-family: 'Merriweather', serif;
+}
+
+/*Containers*/
+.container-fluid-extended {
+    max-width: 100%;
+    padding: 6% 10%;
+}
+
+.container-fluid-heading {
+    max-width: 100%;
+    text-align: center;
+}
+
+.container-extended {
+    max-width: 100%;
+    margin: auto auto;
+}
+
+/*Heading*/
+.jumbotron-extend {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+}
+
+.bg-img {
+    background: url(../images/tokyo.jpg)  fixed no-repeat center center;
+    filter: blur(2px) contrast(80%) grayscale(10%);
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    z-index: 2;
+    background-color: #0f3057;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+    -webkit-background-size: 7px 7px;
+}
+
+.jumbotron .container-fluid {
+    position: relative;
+    top: 40%;
+    text-align: center;
+    color: black;
+    z-index: 3;
+}
+
+.jumbotron .container-fluid h1 {
+    font-size: 4rem;
+}
+
+.jumbotron .container-fluid p {
+    font-size: 2rem;
+}
+
+/* Heading Animation */
+@media only screen and (min-width: 576px){
+    .line-1{
+        position: relative;
+        top: 3rem;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        font-size: 180%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+    }
+
+    .anim-typewriter{
+      animation: typewriter 3s steps(22) 1s 1 normal both,
+                 blinkTextCursor 500ms steps(22) infinite normal;
+    }
+
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 500px;}
+    }
+
+    @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+    }
+}
+
+
+/*Particle.js*/
+canvas {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#particles-js {
+    z-index: -1;
+    position: absolute;
+}
+
+@media only screen and (max-width: 576px) and (orientation: portrait){
+    .bg-img {
+        background-attachment: scroll;
+    }
+}
+
+/*Sections*/
+.section-title {
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.colored-section {
+    background: #e7e7de;
+    color: #0f3057;
+}
+
+/*Profile*/
+.profile-img-container{
+    text-align: center;
+}
+
+.profile-img {
+    height: 12.5rem;
+    position: relative;
+    /*margin-right: 3rem;*/
+}
+
+.profile-description {
+    opacity: 0.85;
+    background-color: white;
+    text-align: left;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .profile-img-container{
+        text-align: center;
+    }
+    .profile-img {
+        margin-right: 0;
+    }
+    .profile-description {
+        text-align: center;
+    }
+}
+
+/*Skills*/
+#skills .container-fluid-extended {
+    max-width: 810px;
+    padding: 5% 3% 2% 5%;
+}
+
+.skill-section {
+    position: relative;
+    margin-bottom: 7%;
+    text-align: center;
+}
+
+.no-bullets {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.customized-star {
+    float: right;
+}
+
+#skills .no-bullets li:hover {
+    background: #f6f5f5;
+}
+
+#skills .no-bullets li:hover .skill-level{
+    letter-spacing: 5px;
+    transition: all .3s;
+}
+
+.fill-out-helper {
+    height: 5rem;
+}
+
+/*Experiences*/
+.career-footer {
+    bottom: 5%;
+}
+
+.career-footer-icon {
+    margin-right: 0.5rem;
+}
+
+.separator {
+    margin: 0 1rem;
+}
+
+.experience-title {
+    margin-bottom: 3rem;
+}
+
+#experience a {
+    font-family: 'Merriweather', serif;
+    color: black;
+}
+
+.experience-content {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 576px) {
+    .experience-title {
+        margin-bottom: 0rem;
+    }
+}
+
+/*Portfolio*/
+.portfolio {
+    position: relative;
+    text-align: center;
+}
+
+.card-extended {
+    margin: 1rem 0;
+}
+
+.card-img-top-extend {
+    padding-top: 1rem;
+}
+
+.subtitle-extend {
+    font-size: 0.7rem;
+}
+
+/*Endorsement*/
+#endorsement {
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.endorsement-description {
+    text-align: center;
+}
+
+.testimonial-image {
+    width: 10%;
+    border-radius: 100%;
+}
+
+.endorsement-name {
+    padding-left: 1rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: #0f3057;
+}
+
+.endorsement-link {
+    font-family: 'Merriweather', serif;
+    color: #0f3057;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.carousel-extend {
+    padding: 7% 0;
+}
+
+@media (max-width: 576px) {
+    .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .endorsement-name {
+        padding-left: 0.3rem;
+        font-family: 'Merriweather', serif;
+        font-size: 0.5rem;
+        color: #0f3057;
+    }
+    .endorsement-position {
+        font-size: 6px;
+    }
+    .endorsement-link {
+        font-size: 6px;
+    }
+}
+
+/*Contact-me*/
+#contact-me {
+    background: #1f6f8b;
+    color: black;
+    font-size: 2rem;
+}
+
+#contact-me .no-bullets {
+    padding-left: 20%;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+#contact-me a {
+    color: black;
+    font-size: 14px;
+}
+
+#contact-me .no-bullets li:hover a {
+    color: #e7e7de;
+}
+
+.contact-link {
+    margin-left: 1rem;
+}
+
+@media (max-width: 576px) {
+    #contact-me .no-bullets {
+        margin: 0 auto;
+        padding-right: 10%;
+    }
+    .contact-icon {
+        font-size: 1.2rem;
+    }
+    .contact-link {
+        font-size: 0.7rem;
+    }
+    .contact-link {
+        margin-left: 0.7rem;
+    }
+}
+
+/*Footer*/
+
+.footer-container {
+    text-align: center;
+    padding: 1% 0;
+}
+
+#footer {
+    background: grey;
+    font-size: 10px;
+}
+
+#footer a {
+    color: black;
+}
+
+#footer p {
+    margin-bottom: 0;
+}
+
+/*readmore*/
+.collapse-content .collapse-switch a.collapsed:after {
+    white-space: pre;
+    font-family: FontAwesome;
+    content: 'read more\A \f078';
+}
+
+.collapse-content .collapse-switch a:not(.collapsed):after {
+    font-family: FontAwesome;
+    content: '\f077';
+}
+
+.collapsed-extend {
+    padding: 10% 0;
+}
