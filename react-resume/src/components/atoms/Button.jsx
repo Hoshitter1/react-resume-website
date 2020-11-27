@@ -4,12 +4,12 @@ function ButtonBootstrap(props) {
   return (
     <button
       type="button"
-      className="btn btn-outline-secondary"
+      className={"btn " + "btn-outline-" + props.style}
       style={{ marginTop: "0.5rem", marginRight: "0.5rem" }}
     >
-      props.name
+      {props.name}
     </button>
   );
 }
 
-export default ButtonBootstrap;
+export { ButtonBootstrap };

@@ -310,13 +310,13 @@ canvas {
 }
 
 /*Contact-me*/
-#contact-me {
+#contact {
     background: #1f6f8b;
     color: black;
     font-size: 2rem;
 }
 
-#contact-me .no-bullets {
+#contact .no-bullets {
     padding-left: 20%;
 }
 
@@ -325,12 +325,12 @@ canvas {
     vertical-align: middle;
 }
 
-#contact-me a {
+#contact a {
     color: black;
     font-size: 14px;
 }
 
-#contact-me .no-bullets li:hover a {
+#contact .no-bullets li:hover a {
     color: #e7e7de;
 }
 
@@ -339,7 +339,7 @@ canvas {
 }
 
 @media (max-width: 576px) {
-    #contact-me .no-bullets {
+    #contact .no-bullets {
         margin: 0 auto;
         padding-right: 10%;
     }

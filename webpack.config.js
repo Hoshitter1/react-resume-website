@@ -1,7 +1,7 @@
 var webpack = require("webpack");
 var path = require("path");
 var publidDir = __dirname + "/react-resume/public";
-const outputPath = path.resolve(__dirname, "react-resume", "public");
+const outputPath = path.resolve(publidDir, "js");
 
 function resolve(dir) {
   console.log(path.resolve(__dirname, dir));
@@ -16,7 +16,7 @@ module.exports = {
     path: outputPath,
   },
   devServer: {
-    contentBase: outputPath,
+    contentBase: publidDir,
     hot: true,
     watchContentBase: true,
     inline: true,

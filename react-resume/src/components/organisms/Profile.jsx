@@ -1,10 +1,34 @@
 import React from "react";
-import ButtonBootstrap from "~/components/atoms/Button";
+import { ButtonBootstrap } from "~/components/atoms/Button";
 
-function Introduction() {
+function Profile() {
   const hobbies = ["#Surfing", "#Photography", "#Tennis", "#Games"];
+  const hobbiesWithLink = { "#Photography": "https://hoshitophotography.com/" };
+  const profileDescription =
+    "I am a full stack and machine learning engineer. I love developing things, as well as thinking about business based on data - such as marketing, customer experience, trading financial products etc. My favourite hobby is taking pictures! You can find my website for photography from the link in the Details section.";
+  function buttonGenerator(index, hobby) {
+    if (Object.keys(hobbiesWithLink).includes(hobby)) {
+      return (
+        <a target="_blank" href={hobbiesWithLink[hobby]}>
+          <ButtonBootstrap
+            key={index}
+            name={hobby}
+            style="primary"
+          ></ButtonBootstrap>
+        </a>
+      );
+    }
+    return (
+      <ButtonBootstrap
+        key={index}
+        name={hobby}
+        style="secondary"
+      ></ButtonBootstrap>
+    );
+  }
+
   return (
-    <section id="introduction">
+    <section id="profile">
       <h1 className="section-title">Profile</h1>
       <hr id="intro-about" />
       <div
@@ -14,17 +38,11 @@ function Introduction() {
         <div className="row">
           <div className="col-lg-4 profile-description">
             <h2 className="profile-name">About me</h2>
-            <p className="profile-title">
-              I am a full stack and machine learning engineer. I love developing
-              things, as well as thinking about business based on data - such as
-              marketing, customer experience, trading financial products etc. My
-              favourite hobby is taking pictures! You can find my website for
-              photography from the link in the Details section.
-            </p>
+            <p className="profile-title">{profileDescription}</p>
           </div>
           <div className="col-lg-4 profile-img-container">
             <img
-              alt=""
+              alt="my-img"
               className="profile-img"
               src="images/hoshito_cropped.png"
             />
@@ -42,9 +60,7 @@ function Introduction() {
               <br />
               <strong style={{ fontWeight: "bold" }}>My hobbies</strong>
               <br />
-              {hobbies.map((value, index) => (
-                <ButtonBootstrap key={index} name={value}></ButtonBootstrap>
-              ))}
+              {hobbies.map((value, index) => buttonGenerator(index, value))}
             </p>
           </div>
         </div>
@@ -53,4 +69,4 @@ function Introduction() {
   );
 }
 
-export default Introduction;
+export default Profile;

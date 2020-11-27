@@ -1,6 +1,16 @@
 import React from "react";
 
 function Navbar() {
+  const sectionTItles = [
+    "profile",
+    "skills",
+    "experience",
+    "endorsement",
+    "portfolio",
+    "contact",
+  ];
+  const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
   return (
     <div>
       <nav>
@@ -9,24 +19,11 @@ function Navbar() {
         </div>
         <div className="menu">
           <ul>
-            <li>
-              <a href="#introduction">Profile</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#endorsement">Endorsement</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact-me">Contact</a>
-            </li>
+            {sectionTItles.map((value, index) => (
+              <li>
+                <a href={"#" + value}>{capitalize(value)}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
