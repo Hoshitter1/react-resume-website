@@ -263,6 +263,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./react-resume/src/components/atoms/FillOutHelper.jsx":
+/*!*************************************************************!*\
+  !*** ./react-resume/src/components/atoms/FillOutHelper.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return FillOutHelper; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction FillOutHelper(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    \"class\": \"fill-out-helper\"\n  }, \" \");\n}\n\n//# sourceURL=webpack:///./react-resume/src/components/atoms/FillOutHelper.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/components/atoms/Skill.jsx":
+/*!*****************************************************!*\
+  !*** ./react-resume/src/components/atoms/Skill.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction skillElement(props) {\n  var score = props.score;\n\n  if (score < 1) {\n    throw Error(\"Skill has to be greater than 0\"); // TODO: Create custom error\n  }\n\n  var index = props.index;\n  var language = props.language;\n  var numFill = score;\n  var numEmpty = 5 - numFill;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: index\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n    \"class\": \"skill-name\"\n  }, language), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n    \"class\": \"skill-level\"\n  }, Array.from(Array(numEmpty), function (e, i) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n      key: i,\n      \"class\": \"customized-star far fa-star\"\n    });\n  }), Array.from(Array(numFill), function (e, i) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n      key: i,\n      \"class\": \"customized-star fas fa-star\"\n    });\n  })));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (skillElement);\n\n//# sourceURL=webpack:///./react-resume/src/components/atoms/Skill.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/components/molecules/BeautifulList.jsx":
+/*!*****************************************************************!*\
+  !*** ./react-resume/src/components/molecules/BeautifulList.jsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_atoms_Skill__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/atoms/Skill */ \"./react-resume/src/components/atoms/Skill.jsx\");\n\n\n\nfunction BeautifulList(props) {\n  var object = props.object;\n  var numHalfSection = Object.keys(object).length / 2;\n  var firstHalfObjectKeys = Object.keys(object).filter(function (value, index) {\n    return index < numHalfSection;\n  });\n  var secondHalfObjectKeys = Object.keys(object).filter(function (value, index) {\n    return numHalfSection <= index;\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    \"class\": \"row\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    \"class\": \"col-lg-6\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", {\n    \"class\": \"no-bullets\"\n  }, firstHalfObjectKeys.map(function (key, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms_Skill__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      index: index,\n      language: key,\n      score: object[key]\n    });\n  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    \"class\": \"col-lg-6\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", {\n    \"class\": \"no-bullets\"\n  }, secondHalfObjectKeys.map(function (key, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms_Skill__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      index: index,\n      language: key,\n      score: object[key]\n    });\n  }))));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (BeautifulList);\n\n//# sourceURL=webpack:///./react-resume/src/components/molecules/BeautifulList.jsx?");
+
+/***/ }),
+
 /***/ "./react-resume/src/components/organisms/Header.jsx":
 /*!**********************************************************!*\
   !*** ./react-resume/src/components/organisms/Header.jsx ***!
@@ -299,6 +335,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./react-resume/src/components/organisms/Skills.jsx":
+/*!**********************************************************!*\
+  !*** ./react-resume/src/components/organisms/Skills.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_atoms_FillOutHelper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/atoms/FillOutHelper */ \"./react-resume/src/components/atoms/FillOutHelper.jsx\");\n/* harmony import */ var _components_molecules_BeautifulList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/molecules/BeautifulList */ \"./react-resume/src/components/molecules/BeautifulList.jsx\");\n/* harmony import */ var _data_skill_ProgrammingLanguage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/data/skill/ProgrammingLanguage */ \"./react-resume/src/data/skill/ProgrammingLanguage.jsx\");\n/* harmony import */ var _data_skill_Framework__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/data/skill/Framework */ \"./react-resume/src/data/skill/Framework.jsx\");\n/* harmony import */ var _data_skill_Tool__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/data/skill/Tool */ \"./react-resume/src/data/skill/Tool.jsx\");\n/* harmony import */ var _data_skill_CloudService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ~/data/skill/CloudService */ \"./react-resume/src/data/skill/CloudService.jsx\");\n/* harmony import */ var _data_skill_Knowledge__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ~/data/skill/Knowledge */ \"./react-resume/src/data/skill/Knowledge.jsx\");\n/* harmony import */ var _data_skill_NaturalLanguage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ~/data/skill/NaturalLanguage */ \"./react-resume/src/data/skill/NaturalLanguage.jsx\");\n\n\n\n\n\n\n\n\n\n\nfunction Skills() {\n  var titleAndData = {\n    \"Programming Languages\": _data_skill_ProgrammingLanguage__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    Frameworks: _data_skill_Framework__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n    Tools: _data_skill_Tool__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n    \"Cloud Services\": _data_skill_CloudService__WEBPACK_IMPORTED_MODULE_6__[\"default\"],\n    Knowledge: _data_skill_Knowledge__WEBPACK_IMPORTED_MODULE_7__[\"default\"],\n    \"Natural Languages\": _data_skill_NaturalLanguage__WEBPACK_IMPORTED_MODULE_8__[\"default\"]\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", {\n    \"class\": \"colored-section\",\n    id: \"skills\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", {\n    \"class\": \"section-title\"\n  }, \"Skills\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"hr\", null), Object.keys(titleAndData).map(function (title, index) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      \"class\": \"container-fluid container-fluid-extended\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", {\n      \"class\": \"skill-section\"\n    }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_molecules_BeautifulList__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n      key: index,\n      object: titleAndData[title]\n    }));\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_atoms_FillOutHelper__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Skills);\n\n//# sourceURL=webpack:///./react-resume/src/components/organisms/Skills.jsx?");
+
+/***/ }),
+
 /***/ "./react-resume/src/components/pages/Main.jsx":
 /*!****************************************************!*\
   !*** ./react-resume/src/components/pages/Main.jsx ***!
@@ -307,7 +355,79 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_organisms_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/organisms/Navbar */ \"./react-resume/src/components/organisms/Navbar.jsx\");\n/* harmony import */ var _components_organisms_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/organisms/Header */ \"./react-resume/src/components/organisms/Header.jsx\");\n/* harmony import */ var _components_organisms_Profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/components/organisms/Profile */ \"./react-resume/src/components/organisms/Profile.jsx\");\n\n\n\n\n\nfunction Main() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Navbar__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Profile__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Main);\n\n//# sourceURL=webpack:///./react-resume/src/components/pages/Main.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_organisms_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/organisms/Navbar */ \"./react-resume/src/components/organisms/Navbar.jsx\");\n/* harmony import */ var _components_organisms_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/organisms/Header */ \"./react-resume/src/components/organisms/Header.jsx\");\n/* harmony import */ var _components_organisms_Profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/components/organisms/Profile */ \"./react-resume/src/components/organisms/Profile.jsx\");\n/* harmony import */ var _components_organisms_Skills__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/components/organisms/Skills */ \"./react-resume/src/components/organisms/Skills.jsx\");\n\n\n\n\n\n\nfunction Main() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Navbar__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Profile__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_organisms_Skills__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Main);\n\n//# sourceURL=webpack:///./react-resume/src/components/pages/Main.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/CloudService.jsx":
+/*!******************************************************!*\
+  !*** ./react-resume/src/data/skill/CloudService.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar cloudService = {\n  \"AWS - Lambda\": 4,\n  \"AWS - EC2\": 3,\n  \"AWS - SageMaker\": 4,\n  Heroku: 3,\n  \"AWS - S3\": 4,\n  \"AWS - Comprehend\": 4,\n  \"AWS - VPC\": 3,\n  \"GCP - gpu instance\": 3\n};\n\nif (Object.keys(cloudService).length % 2 != 0) {\n  throw Error(\"The number of cloudService is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (cloudService);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/CloudService.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/Framework.jsx":
+/*!***************************************************!*\
+  !*** ./react-resume/src/data/skill/Framework.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar framework = {\n  Django: 4,\n  \"TensorFlow/Pytorch\": 3,\n  React: 2,\n  Bootstrap: 3,\n  PyQt: 4,\n  Angular: 4\n};\n\nif (Object.keys(framework).length % 2 != 0) {\n  throw Error(\"The number of framework is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (framework);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/Framework.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/Knowledge.jsx":
+/*!***************************************************!*\
+  !*** ./react-resume/src/data/skill/Knowledge.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar knowledge = {\n  Statistics: 4,\n  Accounting: 3,\n  SEO: 3,\n  \"Machine Leaning\": 4,\n  \"Web Design\": 3,\n  \"Electrical Engineering\": 3\n};\n\nif (Object.keys(knowledge).length % 2 != 0) {\n  throw Error(\"The number of knowledge is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (knowledge);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/Knowledge.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/NaturalLanguage.jsx":
+/*!*********************************************************!*\
+  !*** ./react-resume/src/data/skill/NaturalLanguage.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar naturalLanguage = {\n  \"Japanese - native\": 5,\n  \"English - IELTS7.0\": 4\n};\n\nif (Object.keys(naturalLanguage).length % 2 != 0) {\n  throw Error(\"The number of naturalLanguage is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (naturalLanguage);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/NaturalLanguage.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/ProgrammingLanguage.jsx":
+/*!*************************************************************!*\
+  !*** ./react-resume/src/data/skill/ProgrammingLanguage.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar programmingLanguages = {\n  Python: 4,\n  HTML: 4,\n  CSS: 4,\n  JavaScript: 4,\n  TypeScript: 2,\n  \"C++\": 2,\n  SwiftUI: 2,\n  SQL: 2\n};\n\nif (Object.keys(programmingLanguages).length % 2 != 0) {\n  throw Error(\"The number of programmingLanguages is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (programmingLanguages);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/ProgrammingLanguage.jsx?");
+
+/***/ }),
+
+/***/ "./react-resume/src/data/skill/Tool.jsx":
+/*!**********************************************!*\
+  !*** ./react-resume/src/data/skill/Tool.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar tool = {\n  Pycharm: 4,\n  \"Visual Studio\": 3,\n  \"X-code\": 2,\n  Postman: 3,\n  Git: 4,\n  Docker: 4,\n  \"Unix-like OS\": 4,\n  \"CI/CD\": 2\n};\n\nif (Object.keys(tool).length % 2 != 0) {\n  throw Error(\"The number of tool is not even \");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (tool);\n\n//# sourceURL=webpack:///./react-resume/src/data/skill/Tool.jsx?");
 
 /***/ }),
 
