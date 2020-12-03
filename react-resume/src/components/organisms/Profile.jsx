@@ -9,7 +9,7 @@ function Profile() {
   function buttonGenerator(index, hobby) {
     if (Object.keys(hobbiesWithLink).includes(hobby)) {
       return (
-        <a target="_blank" href={hobbiesWithLink[hobby]}>
+        <a key={index} target="_blank" href={hobbiesWithLink[hobby]}>
           <ButtonBootstrap
             key={index}
             name={hobby}

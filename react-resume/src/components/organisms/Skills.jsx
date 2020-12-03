@@ -2,7 +2,7 @@ import React from "react";
 
 import FillOutHelper from "~/components/atoms/FillOutHelper";
 
-import BeautifulList from "~/components/molecules/BeautifulList";
+import SkillList from "~/components/molecules/SkillList";
 
 import programmingLanguage from "~/data/skill/ProgrammingLanguage";
 import framework from "~/data/skill/Framework";
@@ -12,6 +12,7 @@ import Knowledge from "~/data/skill/Knowledge";
 import naturalLanguage from "~/data/skill/NaturalLanguage";
 
 function Skills() {
+  // TODO: String becomes an object after formatting
   const titleAndData = {
     "Programming Languages": programmingLanguage,
     Frameworks: framework,
@@ -21,14 +22,14 @@ function Skills() {
     "Natural Languages": naturalLanguage,
   };
   return (
-    <section class="colored-section" id="skills">
-      <h1 class="section-title">Skills</h1>
+    <section className="colored-section" id="skills">
+      <h1 className="section-title">Skills</h1>
       <hr />
       {Object.keys(titleAndData).map((title, index) => {
         return (
-          <div class="container-fluid container-fluid-extended">
-            <h2 class="skill-section">{title}</h2>
-            <BeautifulList key={index} object={titleAndData[title]} />
+          <div key={index} className="container-fluid container-fluid-extended">
+            <h2 className="skill-section">{title}</h2>
+            <SkillList key={index} object={titleAndData[title]} />
           </div>
         );
       })}

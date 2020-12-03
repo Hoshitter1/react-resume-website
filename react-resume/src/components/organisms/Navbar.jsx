@@ -20,7 +20,7 @@ function Navbar() {
         <div className="menu">
           <ul>
             {sectionTItles.map((value, index) => (
-              <li>
+              <li key={index}>
                 <a href={"#" + value}>{capitalize(value)}</a>
               </li>
             ))}
