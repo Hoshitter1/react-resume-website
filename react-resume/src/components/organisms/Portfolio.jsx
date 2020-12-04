@@ -1,6 +1,6 @@
 import React from "react";
 
-import PortfolioElement from "~/components/molecules/PortfolioElement";
+import PortfolioList from "~/components/molecules/PortfolioList";
 
 import portfolio from "~/data/portfolio/all";
 
@@ -15,7 +15,7 @@ function Portfolio() {
       >
         <div className="row">
           {portfolio.map((obj, index) => (
-            <PortfolioElement
+            <PortfolioList
               key={obj.key}
               index={index}
               title={obj.title}

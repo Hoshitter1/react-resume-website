@@ -99,8 +99,7 @@ const portfolio = [
   {
     key: 10,
     title: "What to eat",
-    url:
-      "https://github.com/Hoshitter1/WhatToEatNow#1-line-bot-to-recommend-what-to-eat-now",
+    url: "https://github.com/Hoshitter1/WhatToEatNow",
     imgUrl: "images/food.png",
     tech: "Python/Django",
     description:

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-function PortfolioElement(props) {
+import Button from "react-bootstrap/Button";
+import Collapse from "react-bootstrap/Collapse";
+
+function PortfolioList(props) {
   const index = props.index;
   const title = props.title;
   const url = props.url;
@@ -9,7 +12,7 @@ function PortfolioElement(props) {
   const description = props.description;
   const button = props.button;
 
-  const [click, setClick] = useState(false);
+  const [open, setOpen] = useState(false);
 
   function createButton() {
     switch (button) {
@@ -32,11 +35,7 @@ function PortfolioElement(props) {
         );
       case "project":
         return (
-          <button
-            type="button"
-            className="btn btn-info btn-lg"
-            // style={{ backgroundColor: "#cad315" }}
-          >
+          <button type="button" className="btn btn-info btn-lg">
             Project
           </button>
         );
@@ -44,8 +43,19 @@ function PortfolioElement(props) {
         throw Error("button has to be either github or qiita");
     }
   }
-  console.log("click: " + click);
-  //   TODO: use react-boostrap
+
+  function customButtonStyle() {
+    if (open) {
+      return {
+        fontFamily: "FontAwesome",
+      };
+    }
+    return {
+      whiteSpace: "pre",
+      fontFamily: "FontAwesome",
+    };
+  }
+
   return (
     <div className="col-lg-4 col-md-6 portfolio">
       <div className="card text-center card-extended">
@@ -63,33 +73,51 @@ function PortfolioElement(props) {
             {tech}
           </h6>
 
-          <div className="collapse-content">
-            <div
-              className="card-text text-left collapse"
-              id={"collapseContent-" + index}
-            >
+          <Collapse in={open}>
+            <div id="example-collapse-text">
               <p>{description}</p>
-              <div style={{ textAlign: "center" }}>
+              <div style={{ paddingBottom: "15px", textAlign: "center" }}>
                 <a target="_blank" href={url}>
                   {createButton()}
                 </a>
               </div>
             </div>
-            <div className="collapse-switch" onClick={() => setClick(!click)}>
-              <a
-                className="btn btn-flat red-text p-1 mt-4 my-1 mr-0 mml-1 collapsed collapsed-extend"
-                onClick={() => setClick(!click)}
-                data-toggle="collapse"
-                href={"#collapseContent-" + index}
-                aria-expanded={click}
-                aria-controls="collapseContent"
-              ></a>
-            </div>
+          </Collapse>
+          <div
+            style={{ cursor: "pointer", padding: "7% 0" }}
+            onClick={() => setOpen(!open)}
+            aria-controls="example-collapse-text"
+            aria-expanded={open}
+          >
+            {open ? (
+              <i class="fas fa-chevron-up" />
+            ) : (
+              <span>
+                read more <br />
+                <i class="fas fa-chevron-down" />
+              </span>
+            )}
           </div>
+          {/* <Button
+            variant="outline-info"
+            size="sm"
+            onClick={() => setOpen(!open)}
+            aria-controls="example-collapse-text"
+            aria-expanded={open}
+          >
+            {open ? (
+              <i class="fas fa-chevron-up" />
+            ) : (
+              <span>
+                read more <br />
+                <i class="fas fa-chevron-down" />
+              </span>
+            )}
+          </Button> */}
         </div>
       </div>
     </div>
   );
 }
 
-export default PortfolioElement;
+export default PortfolioList;
