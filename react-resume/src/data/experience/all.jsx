@@ -4,7 +4,7 @@ const experiences = [
     term: "April2020 - Present",
     position: "Data Scientist",
     description:
-      "Analysis of social media using text data for customer acquisition, as well as ensuring highest quality customer experience. The analysis has been conducted on AWS, namely Lambda, Sagemaker, S3, Glue and Comprehend.",
+      "Analysis of social media using text data for customer acquisition, as well as ensuring highest quality customer experience. The analysis has been conducted on AWS, namely Lambda, Sagemaker, S3, Glue, Athena, Quicksight and Comprehend.",
     contract: "Contract",
     url: "https://www.nttdata.com/global/en/",
     urlString: "nttdata.com",

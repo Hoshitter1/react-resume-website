@@ -16,9 +16,8 @@ function PortfolioElement(props) {
       case "github":
         return (
           <button type="button" className="btn btn-dark btn-lg">
-            <i className="fab fa-github" style={{ paddingRight: "0.5rem" }}>
-              Github
-            </i>
+            <i className="fab fa-github" style={{ paddingRight: "0.5rem" }} />
+            Github
           </button>
         );
       case "qiita":
@@ -29,6 +28,16 @@ function PortfolioElement(props) {
             style={{ backgroundColor: "#56C500" }}
           >
             Qiita
+          </button>
+        );
+      case "project":
+        return (
+          <button
+            type="button"
+            className="btn btn-info btn-lg"
+            // style={{ backgroundColor: "#cad315" }}
+          >
+            Project
           </button>
         );
       default:

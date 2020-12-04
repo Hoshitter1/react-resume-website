@@ -1,11 +1,22 @@
 const portfolio = [
   {
-    key: 1,
-    title: "Resume Website",
+    key: 0,
+    title: "Resume Website 1",
     url: "https://github.com/Hoshitter1/Personal-Website",
     imgUrl: "images/web-design.png",
     tech: "HTML/CSS/Bootstrap4",
-    description: "The code for the website you are currently on.",
+    description:
+      "The code for the website you are currently on was originally created based on the code here",
+    button: "github",
+  },
+  {
+    key: 1,
+    title: "Resume Website 2",
+    url: "https://github.com/Hoshitter1/react-resume-website",
+    imgUrl: "images/react.png",
+    tech: "React/Hook/Bootstrap",
+    description:
+      "The code for the website you are currently on. The html/css code was ported from Resume Website 1.",
     button: "github",
   },
   {
@@ -84,6 +95,27 @@ const portfolio = [
     tech: "Python",
     description: "A snippet to integrate Cryptowatch API in a Python project.",
     button: "qiita",
+  },
+  {
+    key: 10,
+    title: "What to eat",
+    url:
+      "https://github.com/Hoshitter1/WhatToEatNow#1-line-bot-to-recommend-what-to-eat-now",
+    imgUrl: "images/food.png",
+    tech: "Python/Django",
+    description:
+      "A project I am currently working on. At this moment, this has a single function that gets triggered by a keyword from a friend on Line(a message app).",
+    button: "github",
+  },
+  {
+    key: 11,
+    title: "A simple keeper app",
+    url: "https://hoshitter1.github.io/react-keeper/",
+    imgUrl: "images/note.png",
+    tech: "React/Hook",
+    description:
+      "A simple Google-Keeper-like app. Completed it using React.js.",
+    button: "project",
   },
 ];
 
