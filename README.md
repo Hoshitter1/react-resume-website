@@ -14,14 +14,6 @@ npm run build
 npm start
 ```
 
-# Deploy - staging
+# deploy folder
 
-```shell
-netlify deploy
-```
-
-# Deploy - production
-
-```shell
-netlify deploy --prod
-```
+react-resume/public
