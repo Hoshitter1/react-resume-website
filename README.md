@@ -1,6 +1,6 @@
 # Website's URL(tmp)
 
-https://hoshito-resume.netlify.app/
+https://hoshito-resume.com/
 
 # build
 
