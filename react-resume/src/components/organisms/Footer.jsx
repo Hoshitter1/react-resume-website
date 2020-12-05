@@ -6,7 +6,7 @@ function Footer() {
   const author = "Hoshito Furuno";
   return (
     <section id="footer">
-      <div class="footer-container">
+      <div className="footer-container">
         <p>
           ©︎{year} {author}
         </p>
