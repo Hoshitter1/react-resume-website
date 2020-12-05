@@ -44,18 +44,6 @@ function PortfolioList(props) {
     }
   }
 
-  function customButtonStyle() {
-    if (open) {
-      return {
-        fontFamily: "FontAwesome",
-      };
-    }
-    return {
-      whiteSpace: "pre",
-      fontFamily: "FontAwesome",
-    };
-  }
-
   return (
     <div className="col-lg-4 col-md-6 portfolio">
       <div className="card text-center card-extended">
@@ -90,30 +78,14 @@ function PortfolioList(props) {
             aria-expanded={open}
           >
             {open ? (
-              <i class="fas fa-chevron-up" />
+              <i className="fas fa-chevron-up" />
             ) : (
               <span>
                 read more <br />
-                <i class="fas fa-chevron-down" />
+                <i className="fas fa-chevron-down" />
               </span>
             )}
           </div>
-          {/* <Button
-            variant="outline-info"
-            size="sm"
-            onClick={() => setOpen(!open)}
-            aria-controls="example-collapse-text"
-            aria-expanded={open}
-          >
-            {open ? (
-              <i class="fas fa-chevron-up" />
-            ) : (
-              <span>
-                read more <br />
-                <i class="fas fa-chevron-down" />
-              </span>
-            )}
-          </Button> */}
         </div>
       </div>
     </div>
