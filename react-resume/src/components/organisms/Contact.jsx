@@ -2,11 +2,13 @@ import React from "react";
 
 import ContactList from "~/components/molecules/ContactList";
 
+import { PlainSection } from "~/components/templates/Section";
+
 import contacts from "~/data/contact/all";
 
 function Contact() {
   return (
-    <section id="contact">
+    <PlainSection name="contact">
       <h1 className="section-title">Contact</h1>
       <hr />
       <div
@@ -25,7 +27,7 @@ function Contact() {
           ))}
         </div>
       </div>
-    </section>
+    </PlainSection>
   );
 }
 

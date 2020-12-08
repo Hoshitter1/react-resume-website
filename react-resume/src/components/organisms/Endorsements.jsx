@@ -2,11 +2,13 @@ import React from "react";
 
 import EndorsementList from "~/components/molecules/EndorsementList";
 
+import { ColorSection } from "~/components/templates/Section";
+
 import endorsements from "~/data/endorsement/all";
 
 function Endorsements() {
   return (
-    <section className="colored-section" id="endorsement">
+    <ColorSection name="endorsement">
       <h1 className="section-title">Endorsement</h1>
       <hr />
       <div
@@ -54,7 +56,7 @@ function Endorsements() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-    </section>
+    </ColorSection>
   );
 }
 

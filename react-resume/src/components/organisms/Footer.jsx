@@ -1,11 +1,13 @@
 import React from "react";
 
+import { PlainSection } from "~/components/templates/Section";
+
 function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   const author = "Hoshito Furuno";
   return (
-    <section id="footer">
+    <PlainSection name="footer">
       <div className="footer-container">
         <p>
           ©︎{year} {author}
@@ -21,7 +23,7 @@ function Footer() {
           </a>
         </p>
       </div>
-    </section>
+    </PlainSection>
   );
 }
 

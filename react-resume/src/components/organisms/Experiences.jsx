@@ -2,11 +2,13 @@ import React from "react";
 
 import ExperienceList from "~/components/molecules/ExperienceList";
 
+import { PlainSection } from "~/components/templates/Section";
+
 import experiences from "~/data/experience/all";
 
 function Experiences() {
   return (
-    <section id="experience">
+    <PlainSection name="experience">
       <h1 className="section-title">Experience</h1>
       <hr />
       <div
@@ -28,7 +30,7 @@ function Experiences() {
           );
         })}
       </div>
-    </section>
+    </PlainSection>
   );
 }
 

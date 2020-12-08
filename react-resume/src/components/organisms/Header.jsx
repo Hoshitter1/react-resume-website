@@ -1,8 +1,10 @@
 import React from "react";
 
+import { PlainSection } from "~/components/templates/Section";
+
 function Header() {
   return (
-    <section id="top">
+    <PlainSection name="top">
       <div className="jumbotron jumbotron-extend" style={{ marginBottom: 0 }}>
         <div className="container-fluid container-fluid-heading position-absolute">
           <div className="heading-mobile">
@@ -16,7 +18,7 @@ function Header() {
         <div className="overlay"></div>
         <div className="bg-img"></div>
       </div>
-    </section>
+    </PlainSection>
   );
 }
 

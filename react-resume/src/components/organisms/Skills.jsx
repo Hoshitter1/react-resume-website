@@ -4,6 +4,8 @@ import FillOutHelper from "~/components/atoms/FillOutHelper";
 
 import SkillList from "~/components/molecules/SkillList";
 
+import { ColorSection } from "~/components/templates/Section";
+
 import programmingLanguage from "~/data/skill/ProgrammingLanguage";
 import framework from "~/data/skill/Framework";
 import tool from "~/data/skill/Tool";
@@ -22,7 +24,7 @@ function Skills() {
     "Natural Languages": naturalLanguage,
   };
   return (
-    <section className="colored-section" id="skills">
+    <ColorSection name="skills">
       <h1 className="section-title">Skills</h1>
       <hr />
       {Object.keys(titleAndData).map((title, index) => {
@@ -34,7 +36,7 @@ function Skills() {
         );
       })}
       <FillOutHelper />
-    </section>
+    </ColorSection>
   );
 }
 

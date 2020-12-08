@@ -2,11 +2,13 @@ import React from "react";
 
 import PortfolioList from "~/components/molecules/PortfolioList";
 
+import { PlainSection } from "~/components/templates/Section";
+
 import portfolio from "~/data/portfolio/all";
 
 function Portfolio() {
   return (
-    <section id="portfolio">
+    <PlainSection name="portfolio">
       <h1 className="section-title">Portfolio</h1>
       <hr />
       <div
@@ -28,7 +30,7 @@ function Portfolio() {
           ))}
         </div>
       </div>
-    </section>
+    </PlainSection>
   );
 }
 

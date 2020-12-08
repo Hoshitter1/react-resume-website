@@ -1,5 +1,8 @@
 import React from "react";
+
 import { ButtonBootstrap } from "~/components/atoms/Button";
+
+import { PlainSection } from "~/components/templates/Section";
 
 function Profile() {
   const hobbies = ["#Surfing", "#Photography", "#Tennis", "#Games"];
@@ -28,7 +31,7 @@ function Profile() {
   }
 
   return (
-    <section id="profile">
+    <PlainSection name="profile">
       <h1 className="section-title">Profile</h1>
       <hr id="intro-about" />
       <div
@@ -65,7 +68,7 @@ function Profile() {
           </div>
         </div>
       </div>
-    </section>
+    </PlainSection>
   );
 }
 
