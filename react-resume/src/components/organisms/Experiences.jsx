@@ -9,7 +9,7 @@ import experiences from "~/data/experience/all";
 function Experiences() {
   return (
     <PlainSection name="experience">
-      <h1 className="section-title">Experience DAYO</h1>
+      <h1 className="section-title">Experience</h1>
       <hr />
       <div
         className="container-fluid container-fluid-extended"
