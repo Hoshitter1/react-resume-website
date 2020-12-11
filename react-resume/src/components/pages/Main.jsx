@@ -1,5 +1,6 @@
 import React from "react";
 
+import Aux from "~/components/hoc/Aux";
 import Navbar from "~/components/organisms/Navbar";
 import Header from "~/components/organisms/Header";
 import Profile from "~/components/organisms/Profile";
@@ -12,7 +13,7 @@ import Footer from "~/components/organisms/Footer";
 
 function Main() {
   return (
-    <div>
+    <Aux>
       <Navbar />
       <Header />
       <Profile />
@@ -22,7 +23,7 @@ function Main() {
       <Portfolio />
       <Contact />
       <Footer />
-    </div>
+    </Aux>
   );
 }
 
