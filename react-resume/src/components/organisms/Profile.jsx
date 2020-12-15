@@ -50,7 +50,7 @@ function Profile() {
               className="profile-img"
               src="images/hoshito_cropped.png"
             />
-            {/* <a
+            <a
               href="assets/resume.pdf"
               target="_blank"
               class="resume-btn btn-gradient"
@@ -78,7 +78,7 @@ function Profile() {
                       "Resume",
                     ]}
               </span>
-            </a> */}
+            </a>
           </div>
           <div className="col-lg-4 profile-description">
             <h2 className="profile-name">Details</h2>
