@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import Navbar from "~/components/organisms/Navbar";
 import Header from "~/components/organisms/Header";
@@ -12,7 +12,7 @@ import Footer from "~/components/organisms/Footer";
 
 function Main() {
   return (
-    <div>
+    <Fragment>
       <Navbar />
       <Header />
       <Profile />
@@ -22,7 +22,7 @@ function Main() {
       <Portfolio />
       <Contact />
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

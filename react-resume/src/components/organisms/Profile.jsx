@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ButtonBootstrap } from "~/components/atoms/Button";
 
 import { PlainSection } from "~/components/templates/Section";
 
 function Profile() {
+  const [isHovered, setIsHovered] = useState(false);
   const hobbies = ["#Surfing", "#Photography", "#Tennis", "#Games"];
   const hobbiesWithLink = { "#Photography": "https://hoshitophotography.com/" };
   const profileDescription =
@@ -49,6 +50,35 @@ function Profile() {
               className="profile-img"
               src="images/hoshito_cropped.png"
             />
+            <a
+              href="assets/resume.pdf"
+              target="_blank"
+              class="resume-btn btn-gradient"
+              onMouseEnter={() => {
+                setIsHovered(!isHovered);
+              }}
+              onMouseLeave={() => {
+                setIsHovered(!isHovered);
+              }}
+            >
+              <span>
+                {isHovered
+                  ? [
+                      <i
+                        className="fas fa-chevron-down"
+                        style={{ marginRight: "6px" }}
+                      />,
+                      "Download",
+                    ]
+                  : [
+                      <i
+                        class="far fa-file-pdf"
+                        style={{ marginRight: "6px" }}
+                      />,
+                      "Resume",
+                    ]}
+              </span>
+            </a>
           </div>
           <div className="col-lg-4 profile-description">
             <h2 className="profile-name">Details</h2>
