@@ -164,6 +164,7 @@ canvas {
         margin-right: 0;
     }
     .profile-description {
+        margin-top: 1rem;
         text-align: center;
     }
 }
@@ -390,3 +391,61 @@ canvas {
 .collapsed-extend {
     padding: 10% 0;
 }
+
+/* Resume Button */
+
+.resume-btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  
+  a.btn-gradient {
+    font-weight: normal;
+    color: #fff;
+    background-image: linear-gradient(145deg,  #99f2c8, #1f4037);
+  }
+  
+  a.btn-gradient:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100vh;
+    width: 100%;
+    height: 100%;
+    content: "";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-image: linear-gradient(135deg, #1f4037, #99f2c8);
+  }
+  
+  a.btn-gradient span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  a.btn-gradient:hover {
+    color: #fff;
+  }
+  
+  a.btn-gradient:hover:after {
+    opacity: 0;
+  }
+  
+  a.btn-gradient {
+    border-radius: 100vh;
+  }
