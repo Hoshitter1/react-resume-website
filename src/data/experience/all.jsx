@@ -31,7 +31,7 @@ const experiences = [
   },
   {
     companyName: "AI medical",
-    term: "November 2019 - December 2019",
+    term: "Jun 2019 - December 2019",
     position: "Full Stack Developer",
     description:
       "Created a web application for doctors that returns images with bounding boxes and coordinates of cancer detected by a machine learning model. I created and developed the model using Pytorch.",
