@@ -1,12 +1,6 @@
-# Website's URL(tmp)
+# Website's URL
 
-https://hoshito-resume.com/
-
-# build
-
-```shell
-npm run build
-```
+> https://hoshito-resume.com/
 
 # start
 
@@ -14,6 +8,14 @@ npm run build
 npm start
 ```
 
+# build
+
+```shell
+npm run build
+```
+
 # deploy folder
 
-react-resume/public
+```shell
+./build
+```
