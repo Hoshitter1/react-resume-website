@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+  const [clicked, setClicked] = useState(false);
   const sectionTItles = [
     "profile",
     "skills",
@@ -14,14 +15,16 @@ function Navbar() {
   return (
     <div>
       <nav>
-        <div className="menu-icon">
+        <div className="menu-icon" onClick={() => setClicked(!clicked)}>
           <i className="fa fa-bars fa-2x"></i>
         </div>
         <div className="menu">
-          <ul>
+          <ul className={clicked && "showing"}>
             {sectionTItles.map((value, index) => (
               <li key={index}>
-                <a href={"#" + value}>{capitalize(value)}</a>
+                <a onClick={() => setClicked(!clicked)} href={"#" + value}>
+                  {capitalize(value)}
+                </a>
               </li>
             ))}
           </ul>
