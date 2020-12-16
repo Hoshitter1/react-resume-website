@@ -1,10 +1,12 @@
 const framework = {
   Django: 4,
-  "TensorFlow/Pytorch": 3,
-  React: 2,
+  Flask: 3,
+  TensorFlow: 3,
+  Pytorch: 3,
+  React: 4,
   Bootstrap: 3,
-  PyQt: 4,
-  Angular: 4,
+  PyQt: 3,
+  Angular: 2,
 };
 
 if (Object.keys(framework).length % 2 != 0) {
